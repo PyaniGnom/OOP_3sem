@@ -26,7 +26,7 @@ int main() {
         }
     }
 
-    bmp.write("OMEGALOL.bmp");
+    bmp.write("../OMEGALOL.bmp");
 
     return 0;
 }

@@ -59,7 +59,6 @@ private:
     uint32_t row_stride{ 0 };
 
     void WriteHeaders(std::ofstream &out_file);
-
     void WriteHeadersAndData(std::ofstream& out_file);
 };
 
