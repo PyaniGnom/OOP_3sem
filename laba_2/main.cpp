@@ -7,7 +7,7 @@ constexpr int MAX_SIZE = 20;
 const fmt::text_style AQUA_COLOR = fg(fmt::color::aqua);
 const fmt::text_style INDIAN_RED_COLOR = fg(fmt::color::indian_red);
 
-char CharRandomGenerator();
+char GenerateRandomChar(char min, char max);
 
 size_t NumberCount(char** matrix, int rows, int cols) {
     std::set<char> charSet;
@@ -55,7 +55,7 @@ int main() {
 
     for (int i = 0; i < rows; ++i) {
         for (int j = 0; j < cols; ++j) {
-            matrix[i][j] = CharRandomGenerator();
+            matrix[i][j] = GenerateRandomChar(33, 126);
         }
     }
 
@@ -76,10 +76,10 @@ int main() {
     return 0;
 }
 
-char CharRandomGenerator() {
+char GenerateRandomChar(char min, char max) {
     std::random_device rd;
     std::mt19937 mt(rd());
-    std::uniform_int_distribution<char> dist(33, 126);
+    std::uniform_int_distribution<char> dist(min, max);
 
     return dist(mt);
 }

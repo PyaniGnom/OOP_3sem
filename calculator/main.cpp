@@ -1,5 +1,5 @@
-#include <climits>
 #include <iostream>
+#include <climits>
 
 double Calculate(double a, double b, char sign) {
     double result;

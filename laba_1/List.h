@@ -1,11 +1,11 @@
 #ifndef LABA_1_LIST_H
 #define LABA_1_LIST_H
 
+
 #include <random>
 #include <vector>
 #include <algorithm>
 #include <fmt/color.h>
-
 
 class List {
 public:
@@ -47,7 +47,7 @@ private:
     };
 
     Node* getAt(int index);
-    int RandomGenerator();
+    int GenerateRandomInt(int min, int max);
 
     Node* head;
     Node* tail;

@@ -17,7 +17,7 @@ size_t List::GetSize() {
 
 void List::Init(size_t count) {
     for (size_t i = 0; i < count; ++i) {
-        PushBack(RandomGenerator());
+        PushBack(GenerateRandomInt(0, 100));
     }
 }
 
@@ -150,10 +150,10 @@ List List::Union(List &secondList) {
     return newList;
 }
 
-int List::RandomGenerator() {
+int List::GenerateRandomInt(int min, int max) {
     std::random_device rd;
     std::mt19937 mt(rd());
-    std::uniform_int_distribution<int> dist(0, 100);
+    std::uniform_int_distribution<int> dist(min, max);
 
     return dist(mt);
 }
